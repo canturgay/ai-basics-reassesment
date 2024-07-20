@@ -163,7 +163,7 @@ def main():
         start_time = time.time()
         print("Loading existing embeddings...")
         embeddings = load_embeddings(root_folder)
-        print(f"Loaded embeddings in {time.time() - start_time:.2f} seconds.")
+        print(f"Loaded {len(embeddings)} embeddings in {time.time() - start_time:.2f} seconds.")
 
         start_time = time.time()
         print("Processing subfolders to create/update embeddings...")
@@ -175,7 +175,7 @@ def main():
         start_time = time.time()
         print("Classifying images and videos in the root folder...")
         results = classify_images_and_videos(root_folder, embeddings)
-        print(f"Classified images and videos in {time.time() - start_time:.2f} seconds.")
+        print(f"Classified {len(results)} images and videos in {time.time() - start_time:.2f} seconds.")
         
         start_time = time.time()
         print("Moving files to corresponding directories...")
